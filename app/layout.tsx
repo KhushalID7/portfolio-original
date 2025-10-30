@@ -1,30 +1,34 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
-import "./globals.css"
-
-const geistSans = Geist({ subsets: ["latin"] })
-const geistMono = Geist_Mono({ subsets: ["latin"] })
+import { GeistSans } from "geist/font/sans"
+import { GeistMono } from "geist/font/mono"
+import "../styles/globals.css"
+import { ThemeProvider } from "@/components/theme-provider"
+import { Toaster } from "@/components/ui/sonner"
 
 export const metadata: Metadata = {
-  title: "Khushal Shroff - ML & Embedded Systems Engineer",
-  description: "Portfolio of Khushal Shroff, showcasing projects in machine learning, embedded systems, and IoT.",
-  openGraph: {
-    title: "Khushal Shroff - ML & Embedded Systems Engineer",
-    description: "Portfolio of Khushal Shroff, showcasing projects in machine learning, embedded systems, and IoT.",
-    type: "website",
-  },
-    generator: 'v0.app'
+  title: "Khushal Shroff - Portfolio",
+  description: "Computer Science & Engineering Student",
 }
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode
-}) {
+}>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.className} bg-background text-foreground`}>{children}</body>
+      <body className={`${GeistSans.variable} ${GeistMono.variable} antialiased`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+          <Toaster />
+        </ThemeProvider>
+      </body>
     </html>
   )
 }

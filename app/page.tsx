@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react"
 import Navbar from "@/components/navbar"
 import Hero from "@/components/hero"
-import TableOfContents from "@/components/table-of-contents"
 import Introduction from "@/components/introduction"
 import Resume from "@/components/resume"
 import Projects from "@/components/projects"
@@ -15,7 +14,9 @@ import Conclusion from "@/components/conclusion"
 import Testimonials from "@/components/testimonials"
 import Contact from "@/components/contact"
 import Footer from "@/components/footer"
+import TableOfContents from "@/components/table-of-contents"
 import ScrollProgress from "@/components/scroll-progress"
+import { BackgroundRippleEffect } from "@/components/ui/background-ripple-effect"
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(true)
@@ -37,26 +38,28 @@ export default function Home() {
   }, [darkMode])
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <ScrollProgress />
-      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-      <main className="flex">
+    <div className="relative min-h-screen">
+      {/* Background Ripple Effect - Behind everything, excluding sidebar */}
+      <BackgroundRippleEffect cellSize={50} />
+      
+      {/* Main Content - Above background */}
+      <div className="relative z-20">
         <TableOfContents />
-        <div className="flex-1">
-          <Hero />
-          <Introduction />
-          <Resume />
-          <Projects />
-          <Skills />
-          <Leadership />
-          <Ethics />
-          <FutureGoals />
-          <Conclusion />
-          <Testimonials />
-          <Contact />
-        </div>
-      </main>
-      <Footer />
+        <ScrollProgress />
+        <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+        <Hero />
+        <Introduction />
+        <Resume />
+        <Projects />
+        <Skills />
+        <Leadership />
+        <Ethics />
+        <FutureGoals />
+        <Conclusion />
+        <Testimonials />
+        <Contact />
+        <Footer />
+      </div>
     </div>
   )
 }

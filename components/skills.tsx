@@ -52,8 +52,7 @@ export default function Skills() {
                     <motion.span
                       key={item}
                       className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm cursor-default"
-                      whileHover={{ scale: 1.05, backgroundColor: "var(--color-primary)" }}
-                      whileHover={{ color: "var(--color-primary-foreground)" }}
+                      whileHover={{ scale: 1.05, backgroundColor: "var(--color-primary)" ,color: "var(--color-primary-foreground)"}}
                       transition={{ duration: 0.2 }}
                     >
                       {item}
