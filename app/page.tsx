@@ -16,7 +16,7 @@ import Contact from "@/components/contact"
 import Footer from "@/components/footer"
 import TableOfContents from "@/components/table-of-contents"
 import ScrollProgress from "@/components/scroll-progress"
-import { BackgroundRippleEffect } from "@/components/ui/background-ripple-effect"
+
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(true)
@@ -39,8 +39,7 @@ export default function Home() {
 
   return (
     <div className="relative min-h-screen">
-      {/* Background Ripple Effect - Behind everything, excluding sidebar */}
-      <BackgroundRippleEffect cellSize={50} />
+      
       
       {/* Main Content - Above background */}
       <div className="relative z-20">
