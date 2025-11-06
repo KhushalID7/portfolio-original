@@ -85,7 +85,7 @@ Simple sequence (PowerShell):
 git init
 git add .
 git commit -m "chore: initial commit"
-git remote add origin https://github.com/<your-username>/<your-repo>.git
+git remote add origin https://github.com/KhushalID7/portfolio-original.git
 git branch -M main
 git push -u origin main
 ```
