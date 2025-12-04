@@ -51,8 +51,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto"
         >
-          Problem-solving at the intersection of embedded systems and applied machine learning — building practical,
-          scalable solutions.
+          Problem-solving at the intersection of embedded systems and applied machine learning building practical, scalable solutions.
         </motion.p>
 
         <motion.div
