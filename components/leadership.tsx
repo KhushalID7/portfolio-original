@@ -10,7 +10,7 @@ export default function Leadership() {
       organization: "Anirveda - Techno Economic Club, PDEU",
       period: "2024-25",
       description:
-        "Led a team, hosted events, developed rule books, and managed budget paperwork. Currently organizing Breach 2025 (hackathon with ₹1.5 lakh prize pool), handling fundraising and paperwork management.",
+        "Lead a team, hosted events, developed rule books, and managed budget paperwork. Currently organizing Breach 2025 (hackathon with ₹1.5 lakh prize pool), handling fundraising and paperwork management.",
       icon: Users,
     },
     {
