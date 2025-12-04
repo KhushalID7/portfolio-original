@@ -13,7 +13,6 @@ import FutureGoals from "@/components/future-goals"
 import Conclusion from "@/components/conclusion"
 import Testimonials from "@/components/testimonials"
 import Contact from "@/components/contact"
-import Footer from "@/components/footer"
 import TableOfContents from "@/components/table-of-contents"
 import ScrollProgress from "@/components/scroll-progress"
 
@@ -57,7 +56,6 @@ export default function Home() {
         <Conclusion />
         <Testimonials />
         <Contact />
-        <Footer />
       </div>
     </div>
   )
